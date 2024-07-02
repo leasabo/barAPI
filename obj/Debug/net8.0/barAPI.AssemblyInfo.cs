@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("barAPI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+436307db1e6e7410dd403110bad67e2f4cc01ed3")]
 [assembly: System.Reflection.AssemblyProductAttribute("barAPI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("barAPI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
