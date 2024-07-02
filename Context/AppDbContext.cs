@@ -10,6 +10,7 @@ namespace barAPI.Context
             
         }
 
+
         public DbSet<Table> Tables { get; set; }
     }
 }
