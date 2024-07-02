@@ -33,18 +33,8 @@ node_modules/
 # Dependencias de npm (si estás usando front-end en npm)
 npm-debug.log
 
-# Dependencias de Bower (si estás usando front-end en Bower)
-bower_components/
-
-# Archivos de caché y configuración de Rider IDE (opcional, para JetBrains Rider)
-.idea/
-
 # Archivos de caché y configuración de Visual Studio Code (opcional, para VS Code)
 .vscode/
-
-# Archivos de caché y configuración de Sublime Text (opcional, para Sublime Text)
-.sublime-project
-.sublime-workspace
 
 # Archivos locales de configuración que no deben estar bajo control de versiones
 appsettings.json
@@ -55,3 +45,9 @@ appsettings.json
 
 # Archivos de respaldo de .NET Core
 *.bak
+
+# Archivo de bloqueo de dependencias de .NET Core
+project.lock.json
+
+# Resultados de ejecución de pruebas
+*.trx
