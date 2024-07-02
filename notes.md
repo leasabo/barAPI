@@ -4,3 +4,7 @@
 # Ideas:
 	- Conocer los mosos actualmente trabajando y sus mesas asignadas
 	- Diferentes tipos de usuarios
+# Paquetes mugrosos instalados:
+	- Entity Framework (Core)
+	- Entity ... SQLServer
+	- Entity ... Tools
