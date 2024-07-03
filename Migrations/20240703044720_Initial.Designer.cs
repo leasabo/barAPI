@@ -11,7 +11,7 @@ using barAPI.Context;
 namespace barAPI.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240702062328_Initial")]
+    [Migration("20240703044720_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -26,8 +26,11 @@ namespace barAPI.Migrations
 
             modelBuilder.Entity("barAPI.Models.Table", b =>
                 {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<int>("Chairs")
                         .HasColumnType("int");

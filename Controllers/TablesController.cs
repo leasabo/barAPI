@@ -30,7 +30,7 @@ namespace barAPI.Controllers
 
         // GET: api/Tables/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Table>> GetTable(string id)
+        public async Task<ActionResult<Table>> GetTable(int id)
         {
             var table = await _context.Tables.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace barAPI.Controllers
         // PUT: api/Tables/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTable(string id, Table table)
+        public async Task<IActionResult> PutTable(int id, Table table)
         {
             if (id != table.Id)
             {
@@ -79,28 +79,14 @@ namespace barAPI.Controllers
         public async Task<ActionResult<Table>> PostTable(Table table)
         {
             _context.Tables.Add(table);
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateException)
-            {
-                if (TableExists(table.Id))
-                {
-                    return Conflict();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _context.SaveChangesAsync();
 
             return CreatedAtAction("GetTable", new { id = table.Id }, table);
         }
 
         // DELETE: api/Tables/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTable(string id)
+        public async Task<IActionResult> DeleteTable(int id)
         {
             var table = await _context.Tables.FindAsync(id);
             if (table == null)
@@ -114,7 +100,7 @@ namespace barAPI.Controllers
             return NoContent();
         }
 
-        private bool TableExists(string id)
+        private bool TableExists(int id)
         {
             return _context.Tables.Any(e => e.Id == id);
         }
